@@ -1,13 +1,13 @@
 #include <iostream>
+#include <string>
 int main()
 {
-    int my_int{0};
-    my_int += 7.6;
+    const double const_dbl{6.3};
     
-    double my_dbl{0};
-    my_dbl += 7.6;
+    int my_int{0};
+    my_int += 4;
 
-    int bad_int{my_dbl};
-
-    printf("My int: %d, my double: %.2f\n", my_int, my_dbl);
+    const std::string my_str{"Hello world!"};
+    
+    printf("%.2f %d %s\n", const_dbl, my_int, my_str.c_str());
 }
