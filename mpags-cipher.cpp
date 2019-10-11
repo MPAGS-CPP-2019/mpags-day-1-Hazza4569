@@ -4,7 +4,7 @@ int main()
 {
     const double const_dbl{6.3};
     
-    int my_int{0};
+    const int my_int{0};
     my_int += 4;
 
     const std::string my_str{"Hello world!"};
