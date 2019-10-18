@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 std::string transliterate(std::string input)
 {
@@ -26,7 +27,13 @@ std::string transliterate(std::string input)
     return strOut;
 }
 
-int main()
+int main(int argc, char* argv[])
 {
-    printf("%s\n",transliterate("hello12z*'.3j").c_str());
+    //store arguments in a vector
+    std::vector<std::string> args{argv, argv+argc}; 
+
+    //iterate over args and print each out:
+    for (std::string iArg : args) printf("%s\n", iArg.c_str());
+
+    //printf("%s\n",transliterate("hello12z*'.3j").c_str());
 }
